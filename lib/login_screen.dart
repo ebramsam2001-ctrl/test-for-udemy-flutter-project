@@ -35,6 +35,28 @@ class LoginScreen extends StatelessWidget {
               onFieldSubmitted: (String value) {
                 print(value);
               },
+              onChanged: (String value) {
+                print(value);
+              },
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: "Password",
+                labelText: "Password",
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.password),
+                suffixIcon: Icon(Icons.remove_red_eye),
+              ),
+              keyboardType: TextInputType.visiblePassword,
+              onFieldSubmitted: (String value) {
+                print(value);
+              },
+              onChanged: (String value) {
+                print(value);
+              },
             ),
           ],
         ),
