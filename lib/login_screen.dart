@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -33,10 +34,14 @@ class LoginScreen extends StatelessWidget {
               ),
               keyboardType: TextInputType.emailAddress,
               onFieldSubmitted: (String value) {
-                print(value);
+                if (kDebugMode) {
+                  print(value);
+                }
               },
               onChanged: (String value) {
-                print(value);
+                if (kDebugMode) {
+                  print(value);
+                }
               },
             ),
             SizedBox(
@@ -51,11 +56,32 @@ class LoginScreen extends StatelessWidget {
                 suffixIcon: Icon(Icons.remove_red_eye),
               ),
               keyboardType: TextInputType.visiblePassword,
+              obscureText: true,
               onFieldSubmitted: (String value) {
-                print(value);
+                if (kDebugMode) {
+                  print(value);
+                }
               },
               onChanged: (String value) {
-                print(value);
+                if (kDebugMode) {
+                  print(value);
+                }
+              },
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            MaterialButton(
+              child: Text(
+                "Login",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30.0,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {
+
               },
             ),
           ],
